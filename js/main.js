@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
             var target = $(this.hash);
             if (target.length) {
                 $("html, body").animate({
-                        scrollTop: target.offset().top - 100,
+                        scrollTop: target.offset().top - 62,
                     },
                     1500,
                     "easeInOutExpo"
