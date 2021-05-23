@@ -181,6 +181,48 @@ hr {
 }
 
 
+/* WELCOME */
+
+.img-welcome {
+    width: 170px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .img-welcome {
+        text-align: center;
+        background-attachment: relative;
+        background-position: center center;
+        width: 170px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+}
+
+.title-welcome {
+    font-family: "anisha";
+    color: white;
+    font-size: 35pt;
+}
+
+.to-name {
+    font-family: "anisha";
+    color: white;
+    font-size: 21pt;
+}
+
+.to-welcome {
+    font-family: "Baskerville";
+    color: white;
+}
+
+.btn-buka {
+    font-family: "Baskerville";
+    font-size: 15px;
+}
+
+
 /*---------------------------------------------------
   SECTION WRAPS
   ---------------------------------------------------*/
