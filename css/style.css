@@ -17,7 +17,7 @@
 
 body {
     background-color: #f2f2f2;
-    font-family: "Lato";
+    font-family: "Baskerville";
     font-weight: 300;
     font-size: 16px;
     color: #555;
@@ -106,7 +106,7 @@ hr {
     right: 0;
     z-index: 10000;
     overflow: visible;
-    font: normal 16px/24px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: "Baskerville" 16px/24px;
 }
 
 #section-topbar a {
@@ -155,9 +155,11 @@ hr {
 
 #section-topbar ul#nav a {
     display: block;
-    font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: "Baskerville" 11px/18px;
     text-decoration: none;
-    padding: 18px 20px 18px 20px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    /* padding: 18px 20px 18px 20px; */
     /* border-left: 1px solid #222; */
 }
 
@@ -278,6 +280,33 @@ hr {
     filter: grayscale(100%);
 }
 
+#headerwrap-welcome {
+    background: url(../img/couple/cover_img.png) no-repeat center top;
+    /* margin-top: 100px; */
+    padding-top: 60px;
+    text-align: center;
+    background-attachment: relative;
+    background-position: center center;
+    min-height: 100vh;
+    width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap-welcome h1 {
+    font-size: 80px;
+}
+
+#headerwrap-welcome h3 {
+    font-size: 20px;
+}
+
 #headerwrap {
     background: url(../img/couple/cover_img.png) no-repeat center top;
     /* margin-top: 100px; */
@@ -371,20 +400,9 @@ p {}
 
 /* Copyright Wrap */
 
-#copyrights {
-    background: #222222;
-    padding: 20px 0;
-    text-align: center;
-    color: #fff;
-    font-size: 16px;
-}
-
-#copyrights p {
-    margin: 0 0 5px 0;
-}
-
-.credits {
-    color: #999;
+.copyrights {
+    margin: 50px;
+    min-width: 330px;
 }
 
 
