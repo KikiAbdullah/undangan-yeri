@@ -29,12 +29,42 @@
     Template Name: Kelvin
     Template URL: https://templatemag.com/kelvin-bootstrap-resume-template/
     Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+      License: https://templatemag.com/license/
+     == ===================================================== -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#myModal").modal('show');
+        });
+    </script>
+    <script>
+        document.getElementById("myAudio").loop = true;
+    </script>
 </head>
 
 <body data-spy="scroll" data-offset="64" data-target="#section-topbar">
-    <audio src="audio/audio.mp3" autoplay="autoplay"></audio>
+    <div class="modal fade" id="myModal" style="z-index: 20000; margin-top: 100px;" tabindex="-1" role="dialog" aria-labelledby="myModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/covid.png" alt="" style="max-height: 400px; padding-top: 50px;" class="img-fluid">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="section-topbar">
         <div id="topbar-inner">
             <div class="container">
@@ -86,6 +116,7 @@
                         <a style="font-size: 20pt; font-family: 'anisha'; color: white;" class="btn btn-outline-dark btn-lg" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Devi+%26+Steven+Wedding&details=Tuhan+yang+menjadikan+sesuatu+yang+indah+pada+waktunya.+Dia+yang+mempertemukan%2C+kini+Dia+pula+yang+mempersatukan+Putra+Putri+kami+dalam+pernikahan+kudus&location=Kolam+Renang+Vanda+Tirta%2C+Jalan+Kolam+Renang+No.105%2C+Tambak+Agung%2C+Kebondalem%2C+Kec.+Mojosari%2C+Mojokerto%2C+Jawa+Timur+61382&dates=20210604T030000Z%2F20210604T100000Z"
                             target="_blank" rel="noopener noreferrer">Save The Date</a>
                     </div>
+
                 </div>
                 <!--/.col-lg-12 -->
             </div>
@@ -99,7 +130,9 @@
         <!--EDUCATION DESCRIPTION -->
         <div class="container desc">
             <div class="row justify-content-center">
+
                 <div class="col-md-8">
+
                     <div class="text-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
                         <h1 class="title-section">We’re Getting Married!</h1>
                         <p>Tuhan yang menjadikan sesuatu yang indah pada waktunya. Dia yang mempertemukan, kini Dia pula yang mempersatukan Putra Putri kami dalam pernikahan kudus <br>
@@ -293,6 +326,10 @@
                         </form>
                     </div>
                     <div class="col-md-8">
+                        <audio src="audio/audio.mp3" autoplay="autoplay" controls id="myAudio"></audio>
+
+                    </div>
+                    <div class="col-md-8">
                         <div class="text-center">
                             <br><br>
                             <a href="https://www.instagram.com/towerbarat.creative/">
@@ -306,11 +343,6 @@
     </section>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
