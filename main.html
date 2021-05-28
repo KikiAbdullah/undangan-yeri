@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Steven & Devi</title>
+    <title>Devi & Steven Wedding</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
@@ -21,6 +21,7 @@
     <!-- Libraries CSS Files -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
 
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet" />
@@ -31,7 +32,7 @@
     Author: TemplateMag.com
       License: https://templatemag.com/license/
      == ===================================================== -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -40,9 +41,6 @@
         $(document).ready(function() {
             $("#myModal").modal('show');
         });
-    </script>
-    <script>
-        document.getElementById("myAudio").loop = true;
     </script>
 </head>
 
@@ -269,14 +267,14 @@
                         <div class="text-center">
                             <h1 class="title-section" style="color:white">Ucapan & Doa</h1>
                         </div>
-                        <form style="color:white" action="#" method="POST">
+                        <form style="color:white" id="send_ucapan" method="POST">
                             <div class="form-group">
                                 <label for="name">Nama</label>
-                                <input style="font-size: 10pt;" type="text" name="name" class="form-control" id="name" placeholder="Masukan Nama..." />
+                                <input style="font-size: 10pt;" type="text" name="nama" class="form-control" id="name" placeholder="Masukan Nama..." />
                             </div>
                             <div class="form-group">
                                 <label for="message">Harapan</label>
-                                <textarea class="form-control" style="font-size: 10pt;" name="message" id="message" placeholder="Harapan untuk pengantin berdua" rows="5"></textarea>
+                                <textarea class="form-control" style="font-size: 10pt;" name="ucapan" id="message" placeholder="Harapan untuk pengantin berdua" rows="5"></textarea>
                             </div>
                             <div class="text-center">
                                 <input type="submit" class="btn btn-lg btn-secondary" value="Kirim Ucapan & Doa">
@@ -285,55 +283,40 @@
                         <br>
                         <br>
                         <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                            <table class="table mb-0">
-                                <tbody>
-                                    <tr>
-                                        <td><img src="img/icons/wishes.svg" class="img-fluid" alt=""></td>
-                                        <td>
-                                            Kiki <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint nihil, debitis, nemo maiores officia vitae molestias ipsam nobis itaque nesciunt minus tenetur suscipit facilis dolores ratione eos deserunt
-                                            sapiente culpa.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="img/icons/wishes.svg" class="img-fluid" alt=""></td>
-                                        <td>
-                                            Kiki <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint nihil, debitis, nemo maiores officia vitae molestias ipsam nobis itaque nesciunt minus tenetur suscipit facilis dolores ratione eos deserunt
-                                            sapiente culpa.
-                                        </td>
-                                    </tr>
-                                </tbody>
+                            <table class="table mb-0" id="table_ucapan">
+                                <tbody id="show_data"></tbody>
                             </table>
                         </div>
                         <br><br>
-                        <hr style="color:white;">
+                        <hr style="color:white; ">
                     </div>
-                    <div class="col-md-8">
-                        <div class="text-center">
-                            <h1 class="title-section" style="color:white">Reservasi</h1>
+                    <div class="col-md-8 ">
+                        <div class="text-center ">
+                            <h1 class="title-section " style="color:white ">Reservasi</h1>
                         </div>
-                        <form style="color:white" action="#" method="POST">
-                            <div class="form-group">
-                                <label for="name">Nama</label>
-                                <input style="font-size: 10pt;" type="text" name="name" class="form-control" id="name" placeholder="Masukan Nama..." />
+                        <form style="color:white " id="send_data " method="POST ">
+                            <div class="form-group ">
+                                <label for="name ">Nama</label>
+                                <input style="font-size: 10pt; " type="text " name="name " class="form-control " id="name " placeholder="Masukan Nama... " />
                             </div>
-                            <div class="form-group">
-                                <label for="whatsapp">Whatsapp</label>
-                                <input style="font-size: 10pt;" type="text" name="whatsapp" class="form-control" id="whatsapp" placeholder="Masukan Whatsapp..." />
+                            <div class="form-group ">
+                                <label for="whatsapp ">Whatsapp</label>
+                                <input style="font-size: 10pt; " type="text " name="whatsapp " class="form-control " id="whatsapp " placeholder="Masukan Whatsapp... " />
                             </div>
 
-                            <div class="form-group">
-                                <label for="message">Harapan</label>
-                                <textarea class="form-control" style="font-size: 10pt;" name="message" id="message" placeholder="Harapan untuk pengantin berdua" rows="5"></textarea>
+                            <div class="form-group ">
+                                <label for="message ">Harapan</label>
+                                <textarea class="form-control " style="font-size: 10pt; " name="message " id="message " placeholder="Harapan untuk pengantin berdua " rows="5 "></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="">Konfirmasi Kehadiran</label>
-                                <select style="font-size: 10pt;" name="kehadiran" class="form-control" id="kehadiran">
-                                        <option value="1">Hadir</option>
-                                        <option value="2">Ragu</option>
-                                        <option value="3">Tidak Hadir</option>
+                            <div class="form-group ">
+                                <label for=" ">Konfirmasi Kehadiran</label>
+                                <select style="font-size: 10pt; " name="kehadiran " class="form-control " id="kehadiran ">
+                                        <option value="Hadir ">Hadir</option>
+                                        <option value="Ragu ">Ragu</option>
+                                        <option value="Tidak Hadir ">Tidak Hadir</option>
                                     </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group ">
                                 <label for="contact-email">Bila hadir, Jumlah yang akan datang ke acara
                                         :</label><br>
                                 <input type="radio" id="" name="jumlah_hadir" value="1">
@@ -343,35 +326,35 @@
                                 <input type="radio" id="" name="jumlah_hadir" value="3">
                                 <label for=""> 3</label><br>
                             </div>
-                            <div class="text-center">
-                                <input type="submit" class="btn btn-lg btn-secondary" value="Kirim Reservasi">
+                            <div class="text-center ">
+                                <input type="submit " class="btn btn-lg btn-secondary " value="Kirim Reservasi ">
                             </div>
                         </form>
                         <br><br>
-                        <hr style="color: white;">
+                        <hr style="color: white; ">
                     </div>
-                    <div class="col-md-8">
-                        <div class="text-center" style="color: white;">
-                            <h1 class="title-section" style="color: white;">Kami Yang Berbahagia</h1>
+                    <div class="col-md-8 ">
+                        <div class="text-center " style="color: white; ">
+                            <h1 class="title-section " style="color: white; ">Kami Yang Berbahagia</h1>
                             <br>
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <p style="color: white;">Kel. Bpk. Miskanto (Alm)<br>Ibu Sudarwati</p>
+                            <div class="row ">
+                                <div class="col-md-5 ">
+                                    <p style="color: white; ">Kel. Bpk. Miskanto (Alm)<br>Ibu Sudarwati</p>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-2 ">
                                     <p>&</p>
                                 </div>
-                                <div class="col-md-5">
-                                    <p style="color: white;">Kel. Bpk Heri Hadijono<br>Ibu Lian Hwa</p>
+                                <div class="col-md-5 ">
+                                    <p style="color: white; ">Kel. Bpk Heri Hadijono<br>Ibu Lian Hwa</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
-                        <div class="text-center">
+                    <div class="col-md-8 ">
+                        <div class="text-center ">
                             <br><br>
-                            <a href="https://www.instagram.com/towerbarat.creative/">
-                                <img src="img/footer.svg" class="copyrights img-fluid" alt="">
+                            <a href="https://www.instagram.com/towerbarat.creative/ ">
+                                <img src="img/footer.svg " class="copyrights img-fluid " alt=" ">
                             </a>
                         </div>
                     </div>
@@ -380,20 +363,79 @@
         </div>
     </section>
 
-
-
     <script>
         AOS.init();
     </script>
     <!-- JavaScript Libraries -->
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/php-mail-form/validate.js"></script>
-    <script src="lib/chart/chart.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/jquery/jquery.min.js "></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js "></script>
+    <script src="lib/php-mail-form/validate.js "></script>
+    <script src="lib/chart/chart.js "></script>
+    <script src="lib/easing/easing.min.js "></script>
+
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+
+    <script type="text/javascript ">
+        $(document).ready(function() {
+            $.ajax({
+                type: 'ajax',
+                url: 'https://www.towerbarat.site/api-undangan/api/get_ucapan',
+                async: false,
+                dataType: 'json',
+                success: function(data) {
+                    var html = '';
+                    var i;
+                    for (i = 0; i < data.length; i++) {
+                        html += '<tr>' +
+                            '<td>' + data[i].nama + '<br>' + data[i].ucapan + '</td>' +
+                            '</tr>';
+                    }
+                    $('#show_data').html(html);
+                }
+
+            });
+        });
+
+        $("#send_ucapan ").submit(function(ev) {
+            ev.preventDefault();
+            $.ajax({
+                type: "POST ",
+                url: "https://www.towerbarat.site/api-undangan/api/send_ucapan",
+                data: new FormData(this),
+                dataType: "JSON ",
+                processData: false,
+                contentType: false,
+                async: false,
+                cache: false,
+                success: function(data) {
+                    window.location.href = '';
+                }
+            });
+        });
+
+        $("#send_data ").submit(function(ev) {
+            ev.preventDefault();
+            $.ajax({
+                type: "POST ",
+                url: "https://www.towerbarat.site/api-undangan/api/send_reservasi",
+                data: new FormData(this),
+                dataType: "JSON ",
+                processData: false,
+                contentType: false,
+                async: false,
+                cache: false,
+                success: function(data) {
+                    window.open(data);
+                }
+            });
+        });
+    </script>
+
+
 
     <!-- Template Main Javascript File -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js "></script>
 
 
 </body>
